@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "tooling_introduced": "2026-11-08",
+  "tooling_scope": "New portfolio data-audit code; not the original 2025 Tableau Prep or workbook calculations.",
+  "source_sha256": "847c2a41664b899ef60a28fb17775fa9d6f2ab42c383a8490ffcabfc399f9fed",
+  "method": {
+    "input_modified": false,
+    "row_level_records_emitted": false,
+    "duplicate_policy": "Retain every row; count exact duplicate occurrences without deduplication.",
+    "salary_policy": "Means use finite positive salary_in_usd values; raw salary in mixed currencies is not averaged.",
+    "group_count_policy": "row_count retains all group rows; valid_positive_usd_count is the mean denominator.",
+    "enum_policy": "Report invalid values without dropping their rows or silently relabeling them.",
+    "population_claim": "None. Descriptive snapshot aggregates do not establish representative labor-market estimates.",
+    "tableau_runtime_executed": false
+  },
+  "row_count": 637,
+  "field_count": 11,
+  "fields": [
+    "work_year",
+    "experience_level",
+    "employment_type",
+    "job_title",
+    "salary",
+    "salary_currency",
+    "salary_in_usd",
+    "employee_residence",
+    "remote_ratio",
+    "company_location",
+    "company_size"
+  ],
+  "distinct_row_count": 588,
+  "duplicate_row_occurrences": 49,
+  "year_counts": {
+    "2020": 73,
+    "2021": 217,
+    "2022": 347
+  },
+  "invalid_year_row_count": 0,
+  "enum_validity": {
+    "experience_level": {
+      "allowed": [
+        "EN",
+        "EX",
+        "MI",
+        "SE"
+      ],
+      "invalid_row_count": 0,
+      "invalid_values": {}
+    },
+    "employment_type": {
+      "allowed": [
+        "CT",
+        "FL",
+        "FT",
+        "PT"
+      ],
+      "invalid_row_count": 0,
+      "invalid_values": {}
+    },
+    "company_size": {
+      "allowed": [
+        "L",
+        "M",
+        "S"
+      ],
+      "invalid_row_count": 0,
+      "invalid_values": {}
+    },
+    "remote_ratio": {
+      "allowed": [
+        "0",
+        "100",
+        "50"
+      ],
+      "invalid_row_count": 0,
+      "invalid_values": {}
+    }
+  },
+  "salary_validity": {
+    "salary": {
+      "valid_positive_count": 637,
+      "invalid_or_nonpositive_count": 0
+    },
+    "salary_in_usd": {
+      "valid_positive_count": 637,
+      "invalid_or_nonpositive_count": 0,
+      "mean": 113275.43956,
+      "at_least_200000_count": 70,
+      "greater_than_200000_count": 58,
+      "exactly_200000_count": 12
+    }
+  },
+  "country_scope": {
+    "employee_residence": {
+      "distinct_country_code_count": 59,
+      "missing_row_count": 0,
+      "non_two_letter_code_row_count": 0,
+      "code_check_scope": "Two-letter format only; country-code membership is not validated."
+    },
+    "company_location": {
+      "distinct_country_code_count": 52,
+      "missing_row_count": 0,
+      "non_two_letter_code_row_count": 0,
+      "code_check_scope": "Two-letter format only; country-code membership is not validated."
+    }
+  },
+  "experience_groups": [
+    {
+      "group": "EN",
+      "row_count": 92,
+      "valid_positive_usd_count": 92,
+      "mean_salary_usd": 62208.23913
+    },
+    {
+      "group": "EX",
+      "row_count": 26,
+      "valid_positive_usd_count": 26,
+      "mean_salary_usd": 199360.576923
+    },
+    {
+      "group": "MI",
+      "row_count": 220,
+      "valid_positive_usd_count": 220,
+      "mean_salary_usd": 88176.295455
+    },
+    {
+      "group": "SE",
+      "row_count": 299,
+      "valid_positive_usd_count": 299,
+      "mean_salary_usd": 139970.35786
+    }
+  ],
+  "company_size_groups": [
+    {
+      "group": "L",
+      "row_count": 207,
+      "valid_positive_usd_count": 207,
+      "mean_salary_usd": 119621.434783
+    },
+    {
+      "group": "M",
+      "row_count": 346,
+      "valid_positive_usd_count": 346,
+      "mean_salary_usd": 118161.115607
+    },
+    {
+      "group": "S",
+      "row_count": 84,
+      "valid_positive_usd_count": 84,
+      "mean_salary_usd": 77512.761905
+    }
+  ],
+  "remote_ratio_groups": [
+    {
+      "group": "0",
+      "row_count": 135,
+      "valid_positive_usd_count": 135,
+      "mean_salary_usd": 107616.437037
+    },
+    {
+      "group": "100",
+      "row_count": 401,
+      "valid_positive_usd_count": 401,
+      "mean_salary_usd": 123428.685786
+    },
+    {
+      "group": "50",
+      "row_count": 101,
+      "valid_positive_usd_count": 101,
+      "mean_salary_usd": 80528.049505
+    }
+  ],
+  "title_groups_by_mean_salary_usd": [
+    {
+      "group": "Data Analytics Lead",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 405000.0
+    },
+    {
+      "group": "Principal Data Engineer",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 328333.333333
+    },
+    {
+      "group": "Financial Data Analyst",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 275000.0
+    },
+    {
+      "group": "Principal Data Scientist",
+      "row_count": 7,
+      "valid_positive_usd_count": 7,
+      "mean_salary_usd": 215116.285714
+    },
+    {
+      "group": "Director of Data Science",
+      "row_count": 7,
+      "valid_positive_usd_count": 7,
+      "mean_salary_usd": 195027.0
+    },
+    {
+      "group": "Data Architect",
+      "row_count": 11,
+      "valid_positive_usd_count": 11,
+      "mean_salary_usd": 177873.909091
+    },
+    {
+      "group": "Applied Data Scientist",
+      "row_count": 5,
+      "valid_positive_usd_count": 5,
+      "mean_salary_usd": 175655.0
+    },
+    {
+      "group": "Analytics Engineer",
+      "row_count": 4,
+      "valid_positive_usd_count": 4,
+      "mean_salary_usd": 175000.0
+    },
+    {
+      "group": "Data Science Manager",
+      "row_count": 15,
+      "valid_positive_usd_count": 15,
+      "mean_salary_usd": 169252.866667
+    },
+    {
+      "group": "Data Specialist",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 165000.0
+    },
+    {
+      "group": "Head of Data",
+      "row_count": 5,
+      "valid_positive_usd_count": 5,
+      "mean_salary_usd": 160126.8
+    },
+    {
+      "group": "Director of Data Engineering",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 156738.0
+    },
+    {
+      "group": "Head of Data Science",
+      "row_count": 4,
+      "valid_positive_usd_count": 4,
+      "mean_salary_usd": 146718.75
+    },
+    {
+      "group": "Machine Learning Scientist",
+      "row_count": 9,
+      "valid_positive_usd_count": 9,
+      "mean_salary_usd": 143344.444444
+    },
+    {
+      "group": "Applied Machine Learning Scientist",
+      "row_count": 4,
+      "valid_positive_usd_count": 4,
+      "mean_salary_usd": 142025.5
+    },
+    {
+      "group": "Lead Data Engineer",
+      "row_count": 6,
+      "valid_positive_usd_count": 6,
+      "mean_salary_usd": 139691.666667
+    },
+    {
+      "group": "ML Engineer",
+      "row_count": 8,
+      "valid_positive_usd_count": 8,
+      "mean_salary_usd": 138113.0
+    },
+    {
+      "group": "Data Analytics Manager",
+      "row_count": 7,
+      "valid_positive_usd_count": 7,
+      "mean_salary_usd": 127134.285714
+    },
+    {
+      "group": "Cloud Data Engineer",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 124647.0
+    },
+    {
+      "group": "Data Engineering Manager",
+      "row_count": 5,
+      "valid_positive_usd_count": 5,
+      "mean_salary_usd": 123227.2
+    },
+    {
+      "group": "Principal Data Analyst",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 122500.0
+    },
+    {
+      "group": "Machine Learning Manager",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 117104.0
+    },
+    {
+      "group": "Lead Data Scientist",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 115190.0
+    },
+    {
+      "group": "Data Engineer",
+      "row_count": 139,
+      "valid_positive_usd_count": 139,
+      "mean_salary_usd": 113119.223022
+    },
+    {
+      "group": "Data Scientist",
+      "row_count": 148,
+      "valid_positive_usd_count": 148,
+      "mean_salary_usd": 109480.628378
+    },
+    {
+      "group": "Machine Learning Developer",
+      "row_count": 4,
+      "valid_positive_usd_count": 4,
+      "mean_salary_usd": 109330.0
+    },
+    {
+      "group": "Research Scientist",
+      "row_count": 16,
+      "valid_positive_usd_count": 16,
+      "mean_salary_usd": 108965.8125
+    },
+    {
+      "group": "Machine Learning Engineer",
+      "row_count": 44,
+      "valid_positive_usd_count": 44,
+      "mean_salary_usd": 107126.0
+    },
+    {
+      "group": "Computer Vision Software Engineer",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 105248.666667
+    },
+    {
+      "group": "Staff Data Scientist",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 105000.0
+    },
+    {
+      "group": "Machine Learning Infrastructure Engineer",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 101039.333333
+    },
+    {
+      "group": "Big Data Architect",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 99703.0
+    },
+    {
+      "group": "Lead Data Analyst",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 92203.0
+    },
+    {
+      "group": "Data Analyst",
+      "row_count": 104,
+      "valid_positive_usd_count": 104,
+      "mean_salary_usd": 92077.701923
+    },
+    {
+      "group": "Marketing Data Analyst",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 88654.0
+    },
+    {
+      "group": "Lead Machine Learning Engineer",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 87454.0
+    },
+    {
+      "group": "AI Scientist",
+      "row_count": 8,
+      "valid_positive_usd_count": 8,
+      "mean_salary_usd": 82868.625
+    },
+    {
+      "group": "Head of Machine Learning",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 78747.0
+    },
+    {
+      "group": "Business Data Analyst",
+      "row_count": 5,
+      "valid_positive_usd_count": 5,
+      "mean_salary_usd": 76654.0
+    },
+    {
+      "group": "Data Science Engineer",
+      "row_count": 3,
+      "valid_positive_usd_count": 3,
+      "mean_salary_usd": 75803.333333
+    },
+    {
+      "group": "BI Data Analyst",
+      "row_count": 6,
+      "valid_positive_usd_count": 6,
+      "mean_salary_usd": 74755.166667
+    },
+    {
+      "group": "Data Science Consultant",
+      "row_count": 7,
+      "valid_positive_usd_count": 7,
+      "mean_salary_usd": 69420.714286
+    },
+    {
+      "group": "Data Analytics Engineer",
+      "row_count": 4,
+      "valid_positive_usd_count": 4,
+      "mean_salary_usd": 64799.25
+    },
+    {
+      "group": "Finance Data Analyst",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 61896.0
+    },
+    {
+      "group": "ETL Developer",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 54659.0
+    },
+    {
+      "group": "Big Data Engineer",
+      "row_count": 8,
+      "valid_positive_usd_count": 8,
+      "mean_salary_usd": 51974.0
+    },
+    {
+      "group": "Computer Vision Engineer",
+      "row_count": 6,
+      "valid_positive_usd_count": 6,
+      "mean_salary_usd": 44419.333333
+    },
+    {
+      "group": "NLP Engineer",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 37047.0
+    },
+    {
+      "group": "Product Data Analyst",
+      "row_count": 2,
+      "valid_positive_usd_count": 2,
+      "mean_salary_usd": 13036.0
+    },
+    {
+      "group": "3D Computer Vision Researcher",
+      "row_count": 1,
+      "valid_positive_usd_count": 1,
+      "mean_salary_usd": 5409.0
+    }
+  ]
+}

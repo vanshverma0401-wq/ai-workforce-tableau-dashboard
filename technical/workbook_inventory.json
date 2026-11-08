@@ -1,0 +1,697 @@
+{
+  "inventory_format": 1,
+  "original_project_year": 2025,
+  "export_tool_added": "2026-11-08",
+  "source_sha256": {
+    "twbx": "0330db7bb7c6cbfc32265e9186553077922ec464be9c5a63076bb17312827043",
+    "final_twb": "fceb7c973751a427a590d63355edd86e7d29970e84fd857b4444d90bb4b3a50a",
+    "prep_flow_zip": "329b33a206f9756c6271f81051decc0c0c3ec03addbc329f7a79e5ad8c5ae903"
+  },
+  "scope": {
+    "static_only": true,
+    "hyper_opened": false,
+    "tableau_executed": false,
+    "private_paths_and_ids_in_json": false,
+    "not_established": [
+      "fresh rendering",
+      "refresh",
+      "flow execution",
+      "published workbook runtime"
+    ]
+  },
+  "worksheet_count": 10,
+  "dashboard_count": 1,
+  "source_fields": [
+    {
+      "field": "[Company Country]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": "[Country].[ISO3166_2]"
+    },
+    {
+      "field": "[Company Size]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Employee Country]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": "[Country].[ISO3166_2]"
+    },
+    {
+      "field": "[Employment Type]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Experience Label]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Experience Level]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Job TItle]",
+      "datatype": "string",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Remote_Ratio]",
+      "datatype": "integer",
+      "role": "measure",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Salary (USD) (bin)]",
+      "datatype": "integer",
+      "role": "dimension",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Salary (USD)]",
+      "datatype": "integer",
+      "role": "measure",
+      "semantic_role": ""
+    },
+    {
+      "field": "[Year]",
+      "datatype": "integer",
+      "role": "dimension",
+      "semantic_role": ""
+    }
+  ],
+  "worksheets": [
+    {
+      "name": "Bar Chart - Job Title Salaries",
+      "title": "Top AI Job Titles by Average Salary (USD)",
+      "rows": [
+        "[none:Job TItle:nk]"
+      ],
+      "columns": [
+        "[avg:Salary (USD):qk]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "quantitative",
+          "field": "[avg:Salary (USD):qk]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Bar Chart - Salary by Job Title",
+      "title": "Salary Distribution for AI Roles (USD)",
+      "rows": [
+        "[cnt:Job TItle:qk]"
+      ],
+      "columns": [
+        "[none:Salary (USD) (bin):qk]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Job TItle]",
+          "derivation": "Count",
+          "token": "[cnt:Job TItle:qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD) (bin)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD) (bin):qk]"
+        }
+      ],
+      "filters": [],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Bar Chart - Salary by Remote Ratio",
+      "title": "Job Type Distribution by  Remote Type",
+      "rows": [
+        "[cnt:Job TItle:qk]"
+      ],
+      "columns": [
+        "[none:Experience Label:nk]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Job TItle]",
+          "derivation": "Count",
+          "token": "[cnt:Job TItle:qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Label]",
+          "derivation": "None",
+          "token": "[none:Experience Label:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        }
+      ],
+      "filters": [],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Box Plot - Salary by Experience Level",
+      "title": "Salary Ranges Distribution by Company Size (USD)",
+      "rows": [
+        "[none:Salary (USD):qk]"
+      ],
+      "columns": [
+        "[none:Company Size:nk]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD):qk]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        }
+      ],
+      "mark_types": [
+        "Circle"
+      ]
+    },
+    {
+      "name": "KPI \u2013 Average Salary",
+      "title": "",
+      "rows": [
+        ""
+      ],
+      "columns": [
+        ""
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD):ok]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Company Size,Salary (USD))]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        },
+        {
+          "class": "quantitative",
+          "field": "[avg:Salary (USD):qk]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "KPI \u2013 Countries",
+      "title": "",
+      "rows": [
+        ""
+      ],
+      "columns": [
+        ""
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Employee Country]",
+          "derivation": "CountD",
+          "token": "[ctd:Employee Country:qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD):ok]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Company Size,Salary (USD))]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        },
+        {
+          "class": "quantitative",
+          "field": "[avg:Salary (USD):qk]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "KPI \u2013 Job Records",
+      "title": "",
+      "rows": [
+        ""
+      ],
+      "columns": [
+        ""
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "Count",
+          "token": "[cnt:Job TItle:qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD):ok]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Company Size,Salary (USD))]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        },
+        {
+          "class": "quantitative",
+          "field": "[avg:Salary (USD):qk]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Line - Salary Trend Over Time",
+      "title": "Average Salary Over Years (USD)",
+      "rows": [
+        "[avg:Salary (USD):qk]"
+      ],
+      "columns": [
+        "[none:Year:qk]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Label]",
+          "derivation": "None",
+          "token": "[none:Experience Label:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Year]",
+          "derivation": "None",
+          "token": "[none:Year:qk]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Employee Country)]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Map - Salary by Company Location",
+      "title": "Average AI Salaries By Country (USD)",
+      "rows": [
+        "[Latitude (generated)]"
+      ],
+      "columns": [
+        "[Longitude (generated)]"
+      ],
+      "field_instances": [
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "Avg",
+          "token": "[avg:Salary (USD):qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Employee Country]",
+          "derivation": "None",
+          "token": "[none:Employee Country:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        },
+        {
+          "field": "[Salary (USD)]",
+          "derivation": "None",
+          "token": "[none:Salary (USD):ok]"
+        }
+      ],
+      "filters": [
+        {
+          "class": "categorical",
+          "field": "[Action (Company Size,Salary (USD))]"
+        },
+        {
+          "class": "categorical",
+          "field": "[Action (Job TItle)]"
+        },
+        {
+          "class": "quantitative",
+          "field": "[avg:Salary (USD):qk]"
+        }
+      ],
+      "mark_types": [
+        "Automatic"
+      ]
+    },
+    {
+      "name": "Pie Chart - Remote vs On-Site Work",
+      "title": "Remote vs On-site Work \u00c6 ",
+      "rows": [
+        ""
+      ],
+      "columns": [
+        ""
+      ],
+      "field_instances": [
+        {
+          "field": "[Job TItle]",
+          "derivation": "Count",
+          "token": "[cnt:Job TItle:qk]"
+        },
+        {
+          "field": "[Company Size]",
+          "derivation": "None",
+          "token": "[none:Company Size:nk]"
+        },
+        {
+          "field": "[Experience Level]",
+          "derivation": "None",
+          "token": "[none:Experience Level:nk]"
+        },
+        {
+          "field": "[Job TItle]",
+          "derivation": "None",
+          "token": "[none:Job TItle:nk]"
+        },
+        {
+          "field": "[Remote Type]",
+          "derivation": "None",
+          "token": "[none:Remote Type:nk]"
+        }
+      ],
+      "filters": [],
+      "mark_types": [
+        "Pie"
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "AI Salaries Dashboard: Exploring Pay by Role, Experience, and Work Style",
+      "placed_worksheet_count": 7,
+      "placed_worksheets": [
+        "Bar Chart - Job Title Salaries",
+        "Box Plot - Salary by Experience Level",
+        "KPI \u2013 Average Salary",
+        "KPI \u2013 Countries",
+        "KPI \u2013 Job Records",
+        "Line - Salary Trend Over Time",
+        "Map - Salary by Company Location"
+      ],
+      "visible_filter_fields": [
+        "[avg:Salary (USD):qk]",
+        "[none:Company Size:nk]",
+        "[none:Experience Level:nk]",
+        "[none:Job TItle:nk]",
+        "[none:Remote Type:nk]"
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "caption": "Filter 1 (generated)",
+      "activation": "on-select",
+      "source_worksheet": "Map - Salary by Company Location"
+    },
+    {
+      "caption": "Filter 2 (generated)",
+      "activation": "on-select",
+      "source_worksheet": "Bar Chart - Job Title Salaries"
+    },
+    {
+      "caption": "Filter 3 (generated)",
+      "activation": "on-select",
+      "source_worksheet": "Box Plot - Salary by Experience Level"
+    }
+  ],
+  "workbook_calculations": [
+    {
+      "field": "[Salary (USD) (bin)]",
+      "class": "bin",
+      "formula": "[Salary (USD)]",
+      "size": "20000"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "reconciled_date": "2026-11-08",
+  "original_project_year": 2025,
+  "displayed_submission_date": "2025-10-16",
+  "project_authors": [
+    "Denny Hoang",
+    "Vansh Verma"
+  ],
+  "source": "Authenticated original final course submission",
+  "artifacts": [
+    {
+      "filename": "Tableau - HoangVerma AI Salaries Project FINAL.twbx",
+      "bytes": 1684565,
+      "sha256": "0330db7bb7c6cbfc32265e9186553077922ec464be9c5a63076bb17312827043"
+    },
+    {
+      "filename": "Tableau - HoangVerma AI Salaries Project FINAL.zip",
+      "bytes": 2151631,
+      "sha256": "5af2d731ee6ee585daf4f4257cea63c7d1e85f3599f7e49d1219c41c35dc2cee"
+    },
+    {
+      "filename": "Tableau HoangVerma AI Sal FINAL.pdf",
+      "bytes": 275681,
+      "sha256": "51331248d5005fe1642bf13ff2ebead29cccc4cdb5022ad608b3d28e8c98783b"
+    },
+    {
+      "filename": "Tableau Prep- HoangVerma AI Salaries Project FINAL/Book1.twb",
+      "bytes": 281925,
+      "sha256": "1cebe4ad4f8b9f3f844826cc0b9f33774426eeaae1a6af63a11703fd13b29bcf"
+    },
+    {
+      "filename": "Tableau Prep- HoangVerma AI Salaries Project FINAL/Flow1.tfl",
+      "bytes": 5460,
+      "sha256": "329b33a206f9756c6271f81051decc0c0c3ec03addbc329f7a79e5ad8c5ae903"
+    },
+    {
+      "filename": "Tableau Prep- HoangVerma AI Salaries Project FINAL/Output.hyper",
+      "bytes": 65536,
+      "sha256": "11708dd75bbd0d27a9e719ed7e053534300abd27ba6e9d1716185b47b981bb47"
+    },
+    {
+      "filename": "Tableau Prep- HoangVerma AI Salaries Project FINAL/salaries-ai-jobs-net.csv",
+      "bytes": 36970,
+      "sha256": "847c2a41664b899ef60a28fb17775fa9d6f2ab42c383a8490ffcabfc399f9fed"
+    }
+  ],
+  "publication_notes": [
+    "Original final PDF and packaged archives remain private.",
+    "Public CSV matches Plotly mirror byte-for-byte; its license is retained.",
+    "Original TWB source is published separately without its Hyper extract.",
+    "Prep flow evidence is sanitized and does not expose source/output paths."
+  ]
+}

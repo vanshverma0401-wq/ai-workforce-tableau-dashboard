@@ -1,0 +1,108 @@
+{
+  "original_project_year": 2025,
+  "source_twb_sha256": "fceb7c973751a427a590d63355edd86e7d29970e84fd857b4444d90bb4b3a50a",
+  "export_tool_added": "2026-11-08",
+  "figure_count": 11,
+  "note": "Saved source thumbnails, including one dashboard. Several crop the viewport, labels or plot area, and some text is small. These are not fresh runtime renders.",
+  "figures": [
+    {
+      "source_name": "AI Salaries Dashboard: Exploring Pay by Role, Experience, and Work Style",
+      "asset": "assets/worksheets/dashboard-saved-thumbnail.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "192a9e1eb35568b889b813dba51f38f710084d771f6ec40784ccda9af9eaeacf",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Bar Chart - Job Title Salaries",
+      "asset": "assets/worksheets/job-title-salaries.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "9755ee2bdf7680d91a9d35093dbe2f83efae85e316b5910fcc8dfea73ef7dae8",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Bar Chart - Salary by Job Title",
+      "asset": "assets/worksheets/salary-distribution.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "1c590f866bed7444051d10613d0316cea0abf5d305bbce57ad819293bbbea0ae",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Bar Chart - Salary by Remote Ratio",
+      "asset": "assets/worksheets/experience-remote-distribution.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "4ef28b28f9257bb986956e45dbc0f6e81fbd635138cec76c0d339bd3a1857879",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Box Plot - Salary by Experience Level",
+      "asset": "assets/worksheets/salary-by-company-size.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "81f9bb7878d3078f3f82f161723d419cf3ad700f3a8b58740fd4f990d4df0bc0",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "KPI \u2013 Average Salary",
+      "asset": "assets/worksheets/kpi-average-salary.png",
+      "source_width": 384,
+      "source_height": 162,
+      "sha256": "835f546c3a3edf46913f7e5653ae43db1b74b772ae316f86f2ecfc311641b912",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "KPI \u2013 Countries",
+      "asset": "assets/worksheets/kpi-countries.png",
+      "source_width": 384,
+      "source_height": 162,
+      "sha256": "6c75cb82be66b5120e0a2be858e325a5064601c05878a723924a6e5158ab5b3e",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "KPI \u2013 Job Records",
+      "asset": "assets/worksheets/kpi-records.png",
+      "source_width": 248,
+      "source_height": 162,
+      "sha256": "bc9b5b511f03be1e94afbb47eabc820e0f8fc49013a9fe91159268b3b941bdbf",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Line - Salary Trend Over Time",
+      "asset": "assets/worksheets/salary-trend.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "f0e38d170af9d711a1973c98954767da81e841512cd37db5a084401626aa7583",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Map - Salary by Company Location",
+      "asset": "assets/worksheets/salary-by-employee-country.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "a3e76f4db733998765226daf92bad5a178392aadc622b4fa087d7cc3cefc4543",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    },
+    {
+      "source_name": "Pie Chart - Remote vs On-Site Work",
+      "asset": "assets/worksheets/remote-work-distribution.png",
+      "source_width": 384,
+      "source_height": 384,
+      "sha256": "03f26224a27731eaa82cbc8a431ffb53f490d64986ab1d9a68810de060571292",
+      "source_kind": "saved workbook thumbnail",
+      "fresh_runtime_export": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Saved Tableau Prep calculations from the 2025 team project
+Exported for the November 2026 source review; not executed by this tool.
+
+Remote Type
+IF [Remote_Ratio] = 100 THEN "Remote"
+ELSEIF [Remote_Ratio] = 50 THEN "Hybrid"
+ELSE "On-site"
+END
+
+Experience Label
+CASE [Experience Level]
+WHEN "EN" THEN "Entry-Level"
+WHEN "MI" THEN "Mid-Level"
+WHEN "SE" THEN "Senior"
+WHEN "EX" THEN "Executive"
+ELSE [Experience Level]
+END
+
+Is High Paying ( if > 200k )
+IF [Salary (USD)] >= 200000 THEN "Yes"
+ELSE "No"
+END

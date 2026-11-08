@@ -1,0 +1,208 @@
+{
+  "original_project_year": 2025,
+  "export_tool_added": "2026-11-08",
+  "scope": "Selected saved Prep definitions; paths, IDs and personal metadata omitted. Not an executed or runnable flow.",
+  "renames": [
+    {
+      "source": "work_year",
+      "target": "Year"
+    },
+    {
+      "source": "experience_level",
+      "target": "Experience Level"
+    },
+    {
+      "source": "employment_type",
+      "target": "Employment Type"
+    },
+    {
+      "source": "job_title",
+      "target": "Job TItle"
+    },
+    {
+      "source": "salary",
+      "target": "Salary"
+    },
+    {
+      "source": "salary_currency",
+      "target": "Currency"
+    },
+    {
+      "source": "salary_in_usd",
+      "target": "Salary (USD)"
+    },
+    {
+      "source": "employee_residence",
+      "target": "Employee Country"
+    },
+    {
+      "source": "remote_ratio",
+      "target": "Remote_Ratio"
+    },
+    {
+      "source": "company_location",
+      "target": "Company Country"
+    },
+    {
+      "source": "company_size",
+      "target": "Company Size"
+    }
+  ],
+  "cleaning_steps_in_order": [
+    {
+      "order": 1,
+      "type": ".v1.AddColumn",
+      "field": "Remote Type",
+      "expression": "IF [Remote_Ratio] = 100 THEN \"Remote\"\nELSEIF [Remote_Ratio] = 50 THEN \"Hybrid\"\nELSE \"On-site\"\nEND"
+    },
+    {
+      "order": 2,
+      "type": ".v1.AddColumn",
+      "field": "Experience Label",
+      "expression": "CASE [Experience Level]\nWHEN \"EN\" THEN \"Entry-Level\"\nWHEN \"MI\" THEN \"Mid-Level\"\nWHEN \"SE\" THEN \"Senior\"\nWHEN \"EX\" THEN \"Executive\"\nELSE [Experience Level]\nEND"
+    },
+    {
+      "order": 3,
+      "type": ".v1.AddColumn",
+      "field": "Is High Paying ( if > 200k )",
+      "expression": "IF [Salary (USD)] >= 200000 THEN \"Yes\"\nELSE \"No\"\nEND"
+    },
+    {
+      "order": 4,
+      "type": ".v2018_2_1.RichNullFilter",
+      "field": "Salary",
+      "stored_filter_code": 2
+    },
+    {
+      "order": 5,
+      "type": ".v2018_2_1.RichNullFilter",
+      "field": "Salary (USD)",
+      "stored_filter_code": 2
+    },
+    {
+      "order": 6,
+      "type": ".v1.Remap",
+      "field": "Job TItle",
+      "mappings": [
+        {
+          "target": "Machine Learning Engineer",
+          "sources": [
+            "Machine Learning Manager",
+            "Machine Learning Engineer"
+          ]
+        },
+        {
+          "target": "Computer Vision Software Engineer",
+          "sources": [
+            "Computer Vision Software Engineer",
+            "Computer Vision Engineer"
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": ".v1.Remap",
+      "field": "Job TItle",
+      "mappings": [
+        {
+          "target": "Principal Data Scientist",
+          "sources": [
+            "Principal Data Scientist"
+          ]
+        },
+        {
+          "target": "Marketing Data Analyst",
+          "sources": [
+            "Marketing Data Analyst"
+          ]
+        },
+        {
+          "target": "ML Engineer",
+          "sources": [
+            "ML Engineer",
+            "Machine Learning Engineer"
+          ]
+        },
+        {
+          "target": "Principal Data Analyst",
+          "sources": [
+            "Principal Data Analyst"
+          ]
+        },
+        {
+          "target": "Principal Data Engineer",
+          "sources": [
+            "Principal Data Engineer"
+          ]
+        },
+        {
+          "target": "Product Data Analyst",
+          "sources": [
+            "Product Data Analyst"
+          ]
+        },
+        {
+          "target": "Applied Data Scientist",
+          "sources": [
+            "Applied Data Scientist",
+            "Data Scientist"
+          ]
+        },
+        {
+          "target": "Applied Machine Learning Scientist",
+          "sources": [
+            "Applied Machine Learning Scientist",
+            "Machine Learning Scientist"
+          ]
+        },
+        {
+          "target": "BI Data Analyst",
+          "sources": [
+            "BI Data Analyst"
+          ]
+        },
+        {
+          "target": "Big Data Architect",
+          "sources": [
+            "Big Data Architect",
+            "Data Architect"
+          ]
+        },
+        {
+          "target": "Big Data Engineer",
+          "sources": [
+            "Big Data Engineer",
+            "Data Engineer"
+          ]
+        },
+        {
+          "target": "Business Data Analyst",
+          "sources": [
+            "Business Data Analyst",
+            "Data Analyst"
+          ]
+        },
+        {
+          "target": "Data Analytics Lead",
+          "sources": [
+            "Data Analytics Lead",
+            "Lead Data Analyst"
+          ]
+        },
+        {
+          "target": "Computer Vision Software Engineer",
+          "sources": [
+            "Computer Vision Software Engineer",
+            "3D Computer Vision Researcher"
+          ]
+        }
+      ]
+    }
+  ],
+  "not_observed_in_selected_chain": [
+    "deduplication node",
+    "outlier-removal node"
+  ],
+  "runtime_validated": false
+}
