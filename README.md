@@ -1,13 +1,15 @@
 # Data and AI Workforce Salary Dashboard in Tableau
 
+A **business intelligence and salary-analysis case study** that uses Tableau
+and Tableau Prep to compare sampled pay by job role, experience, work arrangement,
+company size and employee geography. The workflow turns a 637-record CSV into
+categorical fields, analytical views and a dashboard with three KPI indicators.
+
 Collaborative academic project by **Denny Hoang and Vansh Verma**, completed in
 2025 using a historical **2020-2022 salary snapshot**. The original project was
 called AI Workforce Insights; the source also includes broader data roles.
 
-This portfolio package contains the original workbook definition, saved visuals,
-readable Tableau Prep logic, an attributed public CSV and reproducible data
-checks. It preserves the distinction between the original team project and the
-new November 2026 audit utilities.
+**[View all visuals](FIGURE_GALLERY.md) · [Explore the Tableau source](tableau/original_workbook.twb) · [Read the Prep calculations](prep/calculated_fields.txt)**
 
 ## Original dashboard
 
@@ -20,6 +22,16 @@ actually uses **employee residence**, despite its original country wording.
 
 See the [complete visual gallery](FIGURE_GALLERY.md) for saved workbook views and
 [technical evidence](technical/TECHNICAL_EVIDENCE.md) for their field bindings.
+
+## Skills demonstrated
+
+| Skill area | Evidence in this project |
+| --- | --- |
+| **Business intelligence and dashboard design** | [Ten Tableau worksheets and one dashboard](technical/workbook_inventory.json), with seven distinct placed sheets |
+| **ETL and data preparation with Tableau Prep** | [Field renames, null filtering and categorical standardization](prep/transformations.json) |
+| **Calculated fields and conditional logic** | [IF/ELSE and CASE expressions](prep/calculated_fields.txt) for remote-work type, experience level and a salary-threshold flag |
+| **KPI reporting and data visualization** | [Salary, record-count and geography KPIs](FIGURE_GALLERY.md), plus role comparisons, a map, box plots and time trends |
+| **Exploratory data analysis and data validation** | [Reproducible Python aggregate checks](scripts/analyze_salaries.py) and [documented results](technical/data_validation.json), added as separate November 2026 audit tooling |
 
 ## At a glance
 
