@@ -11,6 +11,16 @@ called AI Workforce Insights; the source also includes broader data roles.
 
 **[View all visuals](FIGURE_GALLERY.md) · [Explore the Tableau source](tableau/original_workbook.twb) · [Read the Prep calculations](prep/calculated_fields.txt)**
 
+## Readable, reproducible review view
+
+![Independent Python review of the historical salary snapshot](assets/review/salary-overview.svg)
+
+This **November 2026 Python/CSV review export** adds readable labels, explicit
+group counts and employee-residence wording. It uses the public raw records,
+retains repeated rows and does not reproduce Tableau's saved remaps or filter
+context. It is **not a new Tableau export**. The original team dashboard follows
+unchanged.
+
 ## Original dashboard
 
 ![Original collaborative Tableau salary dashboard](assets/original-dashboard.png)
@@ -108,7 +118,17 @@ presented as original 2025 Tableau implementation.
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 python3 scripts/analyze_salaries.py data/salaries-ai-jobs-net.csv --output salary_checks.json
+python3 scripts/render_review.py data/salaries-ai-jobs-net.csv --output assets/review/salary-overview.svg
 ```
+
+The complete public checks and deterministic SVG generation were rerun with
+**Python 3.12.14** on November 10, 2026. The [CI workflow](.github/workflows/checks.yml)
+runs the same tests and verifies that regenerating the review visual leaves its
+committed bytes unchanged. No Tableau application or paid service is required.
+
+The actual final course attachments were reopened on November 10 and their
+fingerprints matched the previously published originals. See the
+[source recheck](technical/submission_recheck_2026-11-10.json).
 
 The source-evidence extractor can inspect authorized copies of the original
 Tableau package and flow; its usage is described in

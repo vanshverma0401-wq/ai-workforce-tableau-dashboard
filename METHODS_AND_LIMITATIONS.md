@@ -83,6 +83,21 @@ Configure authorized data connections and validate the flow before a runtime cla
 
 ## Reproduction
 
+### November 2026 readable review export
+
+`scripts/render_review.py` creates `assets/review/salary-overview.svg` from the
+public raw CSV through the existing aggregate audit. It shows the raw-record
+overall mean, group means with their valid-salary denominators, employee-residence
+code count and yearly sample counts. It retains repeated rows and does not apply
+the original Prep title remaps or saved dashboard filters. XML text is escaped,
+nonfinite/negative metrics are rejected, and source/output collisions are refused.
+
+This new graphic resolves readability and labeling in a separate independent
+view. The original Tableau dashboard and thumbnails stay unchanged. No native
+Tableau/Prep execution, Hyper refresh or interactive filter validation has been
+performed. A source recheck of the actual final attachments on November 10 matched
+the source inventory and the public TWB/Prep evidence byte-for-byte.
+
 The public raw CSV, exact attribution and Python audit allow readers to reproduce
 counts and raw aggregate findings freely. They do not reproduce Tableau's filter
 context, saved extract state or a loadable packaged workbook. Detailed source

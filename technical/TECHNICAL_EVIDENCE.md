@@ -52,6 +52,13 @@ extract or demonstrate fresh Tableau interactions.
 
 ## Remaining verification
 
+The [November 10 submission recheck](submission_recheck_2026-11-10.json) confirms
+that the reopened original final attachments match the retained fingerprints.
+Rerunning the static exporter reproduced the published TWB and selected Prep
+evidence; rerunning the public CSV audit reproduced its saved aggregate JSON.
+The new readable SVG is a separate Python review view. These checks do not execute
+Tableau or replace the native-runtime steps below.
+
 1. Reconnect the data and open the workbook in Tableau.
 2. Run the recovered Prep flow in an authorized environment and compare output with source records.
 3. Confirm dashboard filters/actions and save a new readable export.

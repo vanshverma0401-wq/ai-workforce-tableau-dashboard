@@ -1,0 +1,17 @@
+{
+  "checked_date_local": "2026-11-10",
+  "timezone": "America/Chicago",
+  "source_context": "Original final course attachments reopened and compared with retained source evidence",
+  "original_zip_sha256": "5af2d731ee6ee585daf4f4257cea63c7d1e85f3599f7e49d1219c41c35dc2cee",
+  "original_twbx_sha256": "0330db7bb7c6cbfc32265e9186553077922ec464be9c5a63076bb17312827043",
+  "original_source_fingerprints_match": true,
+  "public_twb_and_prep_evidence_reproduced_byte_exact": true,
+  "public_csv_aggregate_audit_reproduced": true,
+  "new_visual": "assets/review/salary-overview.svg",
+  "new_visual_scope": "Independent aggregate-only Python/CSV review export; not a Tableau runtime export",
+  "tested_python": "3.12.14",
+  "tableau_runtime_executed": false,
+  "hyper_database_opened": false,
+  "private_original_attachments_published": false,
+  "original_figures_changed": false
+}

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="900" viewBox="0 0 1080 900" role="img" aria-labelledby="title description">
+<title id="title">Historical salary snapshot — independent review view</title>
+<desc id="description">Reproducible raw-record salary aggregates with group counts. New Python SVG, not a Tableau export.</desc>
+<rect width="1080" height="900" fill="#f4f7fb"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="50" font-size="14" fill="#087f8c" font-weight="700">SALARY SNAPSHOT / REVIEW VIEW</text>
+<text x="40" y="91" font-size="34" fill="#24364b" font-weight="700">Data &amp; AI workforce</text>
+<text x="40" y="123" font-size="18" fill="#24364b" font-weight="400">2020–2022 submitted records · November 2026 independent audit</text>
+<text x="40" y="151" font-size="16" fill="#24364b" font-weight="400">New Python SVG, not a Tableau export. Original dashboard preserved below.</text>
+<rect x="40" y="181" width="300" height="102" rx="10" fill="white"/>
+<text x="60" y="211" font-size="13" fill="#5d6c7e" font-weight="700">RECORDS</text>
+<text x="60" y="255" font-size="30" fill="#24364b" font-weight="700">637</text>
+<rect x="390" y="181" width="300" height="102" rx="10" fill="white"/>
+<text x="410" y="211" font-size="13" fill="#5d6c7e" font-weight="700">MEAN SALARY / USD</text>
+<text x="410" y="255" font-size="30" fill="#24364b" font-weight="700">$113,275.44</text>
+<rect x="740" y="181" width="300" height="102" rx="10" fill="white"/>
+<text x="760" y="211" font-size="13" fill="#5d6c7e" font-weight="700">EMPLOYEE RESIDENCE CODES</text>
+<text x="760" y="255" font-size="30" fill="#24364b" font-weight="700">59</text>
+<text x="40" y="333" font-size="22" fill="#24364b" font-weight="700">Mean salary by experience</text>
+<text x="40" y="375" font-size="17" fill="#24364b" font-weight="700">Entry-level</text>
+<text x="40" y="399" font-size="14" fill="#5d6c7e" font-weight="400">n=92</text>
+<rect x="195" y="361" width="62.408" height="25" rx="3" fill="#087f8c"/>
+<text x="195" y="413" font-size="16" fill="#24364b" font-weight="400">$62,208</text>
+<text x="40" y="447" font-size="17" fill="#24364b" font-weight="700">Executive</text>
+<text x="40" y="471" font-size="14" fill="#5d6c7e" font-weight="400">n=26</text>
+<rect x="195" y="433" width="200.000" height="25" rx="3" fill="#087f8c"/>
+<text x="195" y="485" font-size="16" fill="#24364b" font-weight="400">$199,361</text>
+<text x="40" y="519" font-size="17" fill="#24364b" font-weight="700">Mid-level</text>
+<text x="40" y="543" font-size="14" fill="#5d6c7e" font-weight="400">n=220</text>
+<rect x="195" y="505" width="88.459" height="25" rx="3" fill="#087f8c"/>
+<text x="195" y="557" font-size="16" fill="#24364b" font-weight="400">$88,176</text>
+<text x="40" y="591" font-size="17" fill="#24364b" font-weight="700">Senior</text>
+<text x="40" y="615" font-size="14" fill="#5d6c7e" font-weight="400">n=299</text>
+<rect x="195" y="577" width="140.419" height="25" rx="3" fill="#087f8c"/>
+<text x="195" y="629" font-size="16" fill="#24364b" font-weight="400">$139,970</text>
+<text x="560" y="333" font-size="22" fill="#24364b" font-weight="700">Mean salary by work arrangement</text>
+<text x="560" y="375" font-size="17" fill="#24364b" font-weight="700">On-site</text>
+<text x="560" y="399" font-size="14" fill="#5d6c7e" font-weight="400">n=135</text>
+<rect x="715" y="361" width="107.962" height="25" rx="3" fill="#087f8c"/>
+<text x="715" y="413" font-size="16" fill="#24364b" font-weight="400">$107,616</text>
+<text x="560" y="447" font-size="17" fill="#24364b" font-weight="700">Remote</text>
+<text x="560" y="471" font-size="14" fill="#5d6c7e" font-weight="400">n=401</text>
+<rect x="715" y="433" width="123.825" height="25" rx="3" fill="#087f8c"/>
+<text x="715" y="485" font-size="16" fill="#24364b" font-weight="400">$123,429</text>
+<text x="560" y="519" font-size="17" fill="#24364b" font-weight="700">Hybrid</text>
+<text x="560" y="543" font-size="14" fill="#5d6c7e" font-weight="400">n=101</text>
+<rect x="715" y="505" width="80.786" height="25" rx="3" fill="#087f8c"/>
+<text x="715" y="557" font-size="16" fill="#24364b" font-weight="400">$80,528</text>
+<text x="40" y="795" font-size="19" fill="#24364b" font-weight="700">Sample composition by work year</text>
+<text x="40" y="823" font-size="18" fill="#24364b" font-weight="400">2020: 73 · 2021: 217 · 2022: 347</text>
+<text x="40" y="855" font-size="15" fill="#24364b" font-weight="400">Anonymous convenience sample; repeated rows retained. Group means are descriptive.</text>
+<text x="40" y="879" font-size="14" fill="#24364b" font-weight="400">Different yearly composition is not like-for-like wage growth. Geography means employee residence.</text>
+</g></svg>
